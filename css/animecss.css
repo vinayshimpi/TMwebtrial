@@ -1,0 +1,29 @@
+.square{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    /*transform: translate(-50%,-50%);*/
+    height:200px;
+    width: 200px;
+    background-color: red;
+    animation-name: firstanime;
+    animation-duration: 2s;
+}
+
+
+/*@keyframes firstanime{
+    0% {
+        opacity: 0;
+        transform: translate(0%,-50%);
+        }
+  
+
+    100% {
+        opacity: 1.0;
+        transform: translate(-50%,-50%);
+
+    }
+}*/
+.square:hover{
+    transform:scale(1.5);
+}

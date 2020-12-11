@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.viewmore{
+    background-color: orange;
+    border-radius: 0px;
+    padding: 12px;
+    width: 150px;
+    font-size: 20px;
+    border: none;
+    font-family: 'GeForce Bold';
+}
+
+.viewmore:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transition-duration: 0.2s;
+    color: orange;
+}
+.geforcefont{
+    font-family: 'GeForce Bold';
+}
+@font-face {
+font-family: 'GeForce Bold';
+src: url('../font/GeForce-Bold.eot');
+src: url('../font/GeForce-Bold.eot?#iefix') format('embedded-opentype'),
+url('../font/GeForce-Bold.woff') format('woff'),
+url('../font/GeForce-Bold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+.responsiveacc{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/gamingacc.jpg);
+    background-repeat: no-repeat;
+    /*z-index: -2;*/
+    background-position: center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: white;
+    position: relative;
+}
+
+.acctext{
+    margin: auto;
+    max-width: 700px;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+  top: 40%;
+  transform: translateY(-50%);/*here downward y is positive*/
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 5px 5px 5px rgba(0, 0,0, 0.2);
+}
