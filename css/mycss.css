@@ -24,6 +24,52 @@ li.dropdown ul {z-index: 99;}
     float: left;    
 }
 
+.logosvg{
+    width: 300px;
+}
+@media(max-width:768px){
+    .logosvg{width: 250px;}
+}
+@media(max-width:1270px){
+    .logosvg{width: 180px;}
+}
+
+
+/*logo animation */
+.man{
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1000;
+}
+.man{
+    animation: man 6s ease-in-out;
+}
+
+@keyframes man{
+    0%{
+        stroke-dashoffset: 1000;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+.navoptions{
+    margin-left: 130px;
+}
+
+@media(max-width:1270px){
+    .navoptions{
+        margin-left: 70px;
+    }
+}
+@media(max-width:1115px){
+    .navoptions{
+        margin-left: 40px;
+    }
+}
+
 li{
     font:15px black;
     padding:0px 20px 0px 20px;
