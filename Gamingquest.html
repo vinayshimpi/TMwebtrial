@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/gamingquest.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <style>
+        /****************************scroll bar customized******************/
+        /* width */
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        /* Track */
+        
+         ::-webkit-scrollbar-track {
+            /* box-shadow: inset 0 0 5px grey; */
+            /* background-color: grey; */
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        /* Handle */
+        
+         ::-webkit-scrollbar-thumb {
+            background: rgba(255, 165, 0, 0.3);
+            border-radius: 10px;
+            height: 100px;
+        }
+        /* Handle on hover */
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 165, 0, 0.9);
+        }
+        
+        html {
+            overflow-y: overlay;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="titleground">
+        <div class="titleTMtest" style="height:100px;line-height: 60px;font-family: geForce bold;font-size: 45px;margin-top: 20px;color: orange;text-align: center;">
+            <span style="margin: auto">ThunderMan free assessment test</span>
+        </div>
+        <div class="stepscontainer">
+            <div class="coll1">
+                <div class="stepbutton" style="background-color: rgba(255,165,0,1); border: none;">
+                    <a href="./questionnaire.html" style="color:white;">step1</a>
+                </div>
+            </div>
+            <div class="coll1">
+                <div class="stepbutton" style="background-color: rgba(255,165,0,0.5); border: none;" onclick="hereonly()">
+                    step2
+                </div>
+            </div>
+            <div class="coll1">
+                <div class="stepbutton">
+                    <a href="./student.html" style="color: white;">step3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Experience">What is your gaming Experience</div>
+    <div style="height: 50px;"></div>
+    <form>
+        <div style="overflow: scroll;">
+            <div class="maincontain">
+                <div class="coll2" style="text-align: center;">
+                    <div class="middle">
+                        <div class="text">Welcome to the gaming world. Ace your gaming perfoemance with your new laptop</div>
+                    </div>
+                    <img src="images/suit1.png" width="170px" class="imagehover">
+
+                    <div style="text-align: center;font-size: 30px;color:orange;font-family: geForce bold;padding: 10px;"><input type="radio" name="exp" id="beginner" value="beginner"> beginner</div>
+                </div>
+                <div class="coll2" style="text-align: center;">
+                    <div class="middle">
+                        <div class="text">Welcome to the gaming world. Ace your gaming perfoemance with your new laptop</div>
+                    </div>
+                    <img src="images/suit2.png" width="200px" height="340px" class="imagehover">
+
+                    <div style="text-align: center;font-size: 30px;color:orange;font-family: geForce bold;padding: 10px;"><input type="radio" name="exp" id="amateur" value="amateur"> amateur</div>
+                </div>
+                <div class="coll2" style="text-align: center;">
+                    <div class="middle">
+                        <div class="text">Welcome to the gaming world. Ace your gaming perfoemance with your new laptop</div>
+                    </div>
+                    <img src="images/suit3.png" width="300px" class="imagehover">
+
+                    <div style="text-align: center;font-size: 30px;color:orange;font-family: geForce bold;padding: 10px;"><input type="radio" name="exp" id="pro" value="pro"> Professional</div>
+                </div>
+
+
+            </div>
+            <div class="maincontain">
+                <div class="coll2" style="text-align: center;">
+                    <div class="middle">
+                        <div class="text">Welcome to the gaming world. Ace your gaming perfoemance with your new laptop</div>
+                    </div>
+                    <img src="images/Mark_44.png" width="300px" height="370px" class="imagehover">
+
+                    <div style="text-align: center;font-size: 30px;color:orange;font-family: geForce bold;padding: 10px;"><input type="radio" name="exp" id="expert" value="expert"> Expert</div>
+                </div>
+                <div id="nodisplay"></div>
+
+                <div class="coll2" style="text-align: center;">
+                    <div class="middle">
+                        <div class="text">Welcome to the gaming world. Ace your gaming perfoemance with your new laptop</div>
+                    </div>
+                    <img src="images/ironmanendgame.png" width="320px" height="370px" class="imagehover">
+
+                    <div style="text-align: center;font-size: 30px;color:orange;font-family: geForce bold;padding: 10px;"><input type="radio" name="exp" id="mvp" value="mvp"> Most valueable - MVP</div>
+                </div>
+
+            </div>
+
+            <div style="font-size: 35px;font-family: 'montserrat',sans-serif;color:orange;width: 60%;margin: auto;line-height: 70px;margin-top: 60px;background-color: rgba(0,0,0,0.6);text-align: center;font-weight: bold;">The screen size</div>
+
+
+            <div class="Container60p">
+                <div class="coll-4">
+                    <div class="middle">
+                        <div class="text">Welcome to the gaming world. Ace your gaming perfoemance with your new laptop</div>
+                    </div>
+                    <!-- <svg class="bd-placeholder-img rounded-circle " width="140 " height="140 " xmlns="http://www.w3.org/2000/svg " preserveAspectRatio="xMidYMid slice " focusable="false " role="img " aria-label="Placeholder: 140x140 -->
+                    <!-- "><title>Placeholder</title><rect width="100% " height="100% " fill="#777 "></rect><text x="50% " y="50% " fill="#777 " dy=".3em ">140x140</text></svg> -->
+                    <img src="images/13inch.png" height="250px" width="340px" class="imagehover">
+                    <!-- <h2>Heading</h2> -->
+                    <!-- <p><a class="btn btn-secondary " href="# " role="button ">View details »</a></p> -->
+                    <div class="screensize-button"><input type="radio" id="smallscreen" value="smallscreen" name="screensize">Small(13-15inch)</div>
+
+                </div>
+                <div class="coll-4">
+                    <div class="middle">
+                        <div class="text">Welcome to the gaming world. Ace your gaming perfoemance with your new laptop</div>
+                    </div>
+                    <!-- <svg class="bd-placeholder-img rounded-circle " width="140 " height="140 " xmlns="http://www.w3.org/2000/svg " preserveAspectRatio="xMidYMid slice " focusable="false " role="img " aria-label="Placeholder: 140x140 -->
+                    <!-- "><title>Placeholder</title><rect width="100% " height="100% " fill="#777 "></rect><text x="50% " y="50% " fill="#777 " dy=".3em ">140x140</text></svg> -->
+                    <img src="images/15.6inch.png" height="250px" class="imagehover">
+                    <!-- <h2>Heading</h2> -->
+                    <!-- <p><a class="btn btn-secondary " href="# " role="button ">View details »</a></p> -->
+                    <div class="screensize-button"><input type="radio" id="smallscreen" value="smallscreen" name="screensize">Small(13-15inch)</div>
+
+                </div>
+                <div class="coll-4">
+                    <div class="middle">
+                        <div class="text">Welcome to the gaming world. Ace your gaming perfoemance with your new laptop</div>
+                    </div>
+                    <!-- <svg class="bd-placeholder-img rounded-circle " width="140 " height="140 " xmlns="http://www.w3.org/2000/svg " preserveAspectRatio="xMidYMid slice " focusable="false " role="img " aria-label="Placeholder: 140x140 -->
+                    <!-- "><title>Placeholder</title><rect width="100% " height="100% " fill="#777 "></rect><text x="50% " y="50% " fill="#777 " dy=".3em ">140x140</text></svg> -->
+                    <img src="images/17inch.png" height="250px" width="340px" class="imagehover">
+                    <!-- <h2>Heading</h2> -->
+                    <!-- <p><a class="btn btn-secondary " href="# " role="button ">View details »</a></p> -->
+                    <div class="screensize-button"><input type="radio" id="smallscreen" value="smallscreen" name="screensize">Small(13-15inch)</div>
+
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+
+
+    </form>
+    <script>
+        function hereonly() {
+            alert('currently you are in step 2');
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
