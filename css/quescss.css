@@ -149,8 +149,9 @@
   /* The container */
   
   .main-container-radio {
+      display: inline-block;
       box-sizing: border-box;
-      width: 70%;
+      width: 49%;
       margin-top: 20px;
       color: white;
       font-family: 'Montserrat', sans-serif;
@@ -177,7 +178,12 @@
       user-select: none;
       margin-top: 10px;
       margin-bottom: 25px;
+      /* transition: 1s; */
+      padding: 40px;
   }
+  /* .container:hover {
+      background-color: orange;
+  } */
   /* Hide the browser's default radio button */
   
   .container input {
@@ -252,5 +258,23 @@
       .main-container-check-child {
           width: 100%;
           height: auto;
+      }
+  }
+  
+  .flex_budget {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  .coll3 {
+      width: 50%;
+  }
+  
+  @media(max-width:800px) {
+      .flex_budget {
+          flex-direction: column;
+      }
+      .coll3 {
+          width: 100%;
       }
   }
