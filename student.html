@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/student.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .dropdown-menu {
+            width: 300px !important;
+            height: 400px !important;
+        }
+        /****************range*********************/
+        /* input[type='range'] {
+            -webkit-appearance: none;
+            background-color: #9a905d;
+        }
+        
+        input[type='range']::-webkit-slider-runnable-track {
+            -webkit-appearance: none;
+            color: #13bba4;
+        }
+        
+        input[type='range']::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            cursor: ew-resize;
+            background: #434343;
+        } */
+        /****************************scroll bar customized******************/
+        /* width */
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        /* Track */
+        
+         ::-webkit-scrollbar-track {
+            /* box-shadow: inset 0 0 5px grey; */
+            /* background-color: grey; */
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        /* Handle */
+        
+         ::-webkit-scrollbar-thumb {
+            background: rgba(255, 165, 0, 1);
+            border-radius: 10px;
+            height: 200px;
+        }
+        /* Handle on hover */
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: rgba(250, 219, 163, 0.9);
+        }
+    </style>
+</head>
+
+<body style="font-family: 'montserrat',sans-serif;">
+    <div class="background1">
+        <div class="titleground">
+            <div class="titleTMtest">
+                <span style="margin: auto">ThunderMan free assessment test</span>
+            </div>
+            <div class="stepscontainer">
+                <div class="coll1">
+                    <div class="stepbutton" style="background-color: rgba(255,165,0,1); border: none;">
+                        step1
+                    </div>
+                </div>
+                <div class="coll1">
+                    <div class="stepbutton" style="background-color: rgba(255,165,0,1); border: none;">
+                        <a href="" id="step2" style="text-decoration: none; color:white;">step2</a>
+                    </div>
+                </div>
+                <div class="coll1">
+                    <div class="stepbutton">
+                        step3
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="myclass-1">
+            <div class="col-lg-8 offset-lg-2">
+                <b>Type of student</b>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-12">
+                <div class="form-check form-check-inline mypadding-1">
+                    <input class="form-check-input" type="radio" name="studenttype" id="school" value="school" checked>
+                    <label class="form-check-label" for="school">
+                          School(includes 11-12th)
+                        </label>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <div class="form-check form-check-inline mypadding-1">
+                    <input class="form-check-input" type="radio" name="studenttype" id="college" value="college" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                          college and beyond
+                        </label>
+                </div>
+            </div>
+        </div>
+        <div class="myclass-1">
+            <div class="col-lg-8 offset-lg-2">
+                <b>which stream are you pursuing?</b>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-3">
+                <div class="form-check form-check-inline mypadding-1">
+                    <input class="form-check-input" type="radio" name="stream" id="medical" value="medical" checked>
+                    <label class="form-check-label" for="medical">
+                            Medical    
+                        </label>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-check form-check-inline mypadding-1">
+                    <input class="form-check-input" type="radio" name="stream" id="engg" value="engg" checked>
+                    <label class="form-check-label" for="engg">
+                          Engineering
+                        </label>
+                </div>
+            </div>
+
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-3">
+                <div class="form-check form-check-inline mypadding-1">
+                    <input class="form-check-input" type="radio" name="stream" id="Commerce" value="Commerce" checked>
+                    <label class="form-check-label" for="Commerce">
+                            Commerce
+                        </label>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-check form-check-inline mypadding-1">
+                    <input class="form-check-input" type="radio" name="stream" id="art" value="art" checked>
+                    <label class="form-check-label" for="art">
+                        Art/humanities
+                        </label>
+                </div>
+            </div>
+        </div>
+        <div class="myclass-1">
+            <div class="col-lg-8 offset-lg-2">
+                <b> Which type of software will be necessary for you during your college course or for extra academic activities?</b>
+
+            </div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-4">
+                <div class="form-check form-check-inline mypadding-1">
+                    <input type="checkbox" name="onlyacads" id="acads2" value="acads2">
+                    <label class="form-check-label" for="acads2">
+                            <b>I want only for general academic activities</b>
+                        </label>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center mypadding-1">
+            <div class="col-lg-6">
+                <div class="dropdown">
+                    <a class="dropdown-toggle mydropdown1" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="deselectradio()">
+                      select the type of software you need in your course or extra acads
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href=""><input type="checkbox" id="engg2"><label for="engg2"><b>Engineering</b></label></a>
+                        <a class="dropdown-item"><input type="checkbox" id="cad"><label for="cad"><b>CAD</b></label></a>
+                        <a class="dropdown-item"><input type="checkbox" id="sim"><label for="sim"><b>simulations</b></label></a>
+                        <a class="dropdown-item"><input type="checkbox" id="code"><label for="code"><b>coding</b></label></a>
+
+
+
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="myclass-1">
+                <div class=" col-lg-8 offset-lg-2 ">
+                    <label for="exampleFormControlTextarea1 ">If in case we missed any softwater then please tell us the software and its use</label>
+                </div>
+            </div>
+            <div class="col-lg-4 col-10 ">
+                <div class="form-group ">
+                    <textarea class="form-control " id="exampleFormControlTextarea1 " rows="3 "></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 40px;"></div>
+    <div style="background-color: rgba(0, 0, 0, 0.8);color: white;">
+        <div class="container">
+            <div style="font-size:30px;text-align:center">Answer these point if you are somewhat inclined towards gaming</div>
+            <div style="height: 50px;"></div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-10 text-center">
+                    <div class="form-group">
+                        <label for="formControlRange" class="font-25">How much gaming you would do?</label>
+                        <input type="range" class="form-control-range" id="forgame" style="background-color: orange;">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-10 text-center">
+                    <div class="form-group">
+                        <label for="formControlRange" class="font-25">how much is the preference for academic use?</label>
+                        <input type="range" class="form-control-range" id="forgame" style="background-color: orange;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+    <script>
+        $(".removefromcart ").on("click ", function(e) {
+            var fadeDelete = $(this).parents('.product');
+            $(fadeDelete).fadeOut(function() {
+                $(this).remove();
+            });
+
+            e.stopPropagation();
+        });
+
+        function deselectradio() {
+            if (document.getElementById('acads2').checked)
+                document.getElementById('acads2').checked = false;
+
+        }
+    </script>
+</body>
+
+</html>

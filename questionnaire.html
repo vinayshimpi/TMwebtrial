@@ -56,15 +56,55 @@
         body {
             overflow-x: hidden;
         }
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        label {
+            padding: 10px;
+        }
+        
+        input[type="radio"]:checked+label {
+            background-color: green;
+        }
+        /* .radio-toolbar input[type="radio"] {
+            display: none;
+        } */
+        
+        .radio-toolbar label {
+            display: inline-block;
+            background-color: #ddd;
+            padding: 4px 11px;
+            font-family: Arial;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .radio-toolbar input[type="radio"]:checked+label {
+            background-color: orange;
+        }
     </style>
 
 </head>
 
 <body>
+    <!-- <div class="radio-toolbar">
+        <input type="radio" id="radio1" name="radios" value="all">
+        <label for="radio1">All</label>
+
+        <input type="radio" id="radio2" name="radios" value="false">
+        <label for="radio2">Open</label>
+
+        <input type="radio" id="radio3" name="radios" value="true">
+        <label for="radio3">Archived</label>
+    </div> -->
+
+
 
     <div class="background">
         <div class="titleground">
-            <div class="titleTMtest" style="height:100px;line-height: 60px;font-family: geForce bold;font-size: 45px;margin-top: 20px;color: orange;text-align: center;">
+            <div class="titleTMtest" style="height:100px;line-height: 60px;font-family: geForce bold;font-size: 45px;margin-top: 10px;color: orange;text-align: center;">
                 <span style="margin: auto">ThunderMan free assessment test</span>
             </div>
             <div class="stepscontainer">
@@ -75,7 +115,7 @@
                 </div>
                 <div class="coll1">
                     <div class="stepbutton">
-                        <a href="./Gamingquest.html">step2</a>
+                        <a href="" id="step2" style="text-decoration: none; color:white">step2</a>
                     </div>
                 </div>
                 <div class="coll1">
@@ -116,6 +156,34 @@
                     <input type="text" id="email-form" name="youremail-form" placeholder="Email ID"><br><br>
                     <!-- <label for="youremail-form">email:</label> -->
                     <input type="text" id="number-form" name="yournumber-form" placeholder="Mob No."><br>
+                    <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family: 'Montserrat',sans-serif;color: orange;font-weight: bold;">What do you best associate yourself with?<br></span>
+
+
+                    <div class="main-container-check" style="margin-top: 30px;">
+                        <div class="main-container-check-child">
+                            <label for="genuser"><img src="icons/businessman (1).png" for="genuser">
+                            <div class="textcenter"> <input type="checkbox" id="genuser" name="type" value="genuser">general user</div>
+                        </label>
+                        </div>
+                        <div class="main-container-check-child">
+                            <label for="student"><img src="icons/student.png" width="190px">
+                                <div class="textcenter"><input type="checkbox" id="student" name="type" value="student"> student</div>
+                      </label>
+                        </div>
+                    </div>
+                    <div class="main-container-check">
+                        <div class="main-container-check-child">
+                            <label for="pro"><img src="icons/businessman (1).png" for="pro">
+                            <div class="textcenter"><input type="checkbox" id="pro" name="type" value="pro">professional</div>
+                      </label>
+                        </div>
+                        <div class="main-container-check-child">
+                            <label for="freelance"><img src="icons/freelance.png" width="190px">
+                            <div class="textcenter"><input type="checkbox" id="freelance" name="type" value="freelance"> 
+                                Freelancer</div>
+                      </label>
+                        </div>
+                    </div>
                     <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family: 'Montserrat',sans-serif;color: orange;font-weight: bold;">please mention your budget<br></span>
                     <!-- <input type="radio" id="upto30k" name="budget" value="upto30k">
                     <label for="upto30k">upto 30k</label><br>
@@ -130,79 +198,76 @@
                     <input type="radio" id="1Labove" name="budget" value="1Labove">
                     <label for="1Labove">1 Lakh above</label><br><br> -->
                     <div class="main-container-radio">
-                        <label class="container">Upto 30k
                         <input type="radio" id="upto30k" name="budget" value="upto30k">
-                        <span class="checkmark"></span>
-                </label>
-                        <label class="container">Upto 40k
+                        <label for="upto30k" onclick="forupto30k()">Upto 30k
+                          
+                        </label>
                         <input type="radio" id="upto40k" name="budget" value="upto40k">
-                        <span class="checkmark"></span>
+                        <label for="upto40k" onclick="forupto30k()">Upto 40k
+                        <!-- <span class="checkmark"></span> -->
                       </label>
-                        <label class="container">Upto 50k
                         <input type="radio" id="upto50k" name="budget" value="upto50k">
-                        <span class="checkmark"></span>
+                        <label for="upto50k" onclick="forupto30k()">Upto 50k
                       </label>
-                        <label class="container">Upto 60k
                         <input type="radio" id="upto60k" name="budget" value="upto60k">
-                        <span class="checkmark"></span>
+                        <label for="upto60k">Upto 60k
                       </label>
-                        <label class="container">Upto 75k
                         <input type="radio" id="upto75k" name="budget" value="upto75k">
-                        <span class="checkmark"></span>
+                        <label for="upto75k">Upto 75k
                       </label>
-                        <label class="container">Upto 1Lakh
                         <input type="radio" id="upto1L" name="budget" value="upto1L">
-                        <span class="checkmark"></span>
+                        <label for="upto1L">Upto 1Lakh
                       </label>
-                        <label class="container">1 Lakh above
                         <input type="radio" id="1Labove" name="budget" value="1Labove">
-                        <span class="checkmark"></span>
+                        <label for="1Labove">1 Lakh above
                       </label>
                     </div>
 
-                    <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family: 'Montserrat',sans-serif;color: orange;font-weight: bold;">What do you best associate yourself with?<br></span>
-
+                    <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family: 'Montserrat',sans-serif;color: orange;font-weight: bold;">Purpose of buying laptop<br></span>
 
                     <div class="main-container-check" style="margin-top: 30px;">
                         <div class="main-container-check-child">
-                            <label class="container" style="margin: auto;left: -7%;top: 10%;"><img src="icons/businessman (1).png" style="margin:auto">
-                            <div style="margin-left: 30px;">general user</div>
-                        <input type="checkbox" id="genuser" name="type" value="genuser">
-                        <span class="checkmark"></span>
-                     </label>
+                            <label for="gaming"><img src="icons/businessman (1).png" for="genuser" onclick="forupto30k()">
+                            <div class="textcenter"> <input type="checkbox" id="gaming" name="purpose" value="gaming" onclick="forupto30k()">gaming</div>
+                        </label>
                         </div>
                         <div class="main-container-check-child">
-                            <label class="container" style="margin: auto;left: -7%;top: 10%;"><img src="icons/student.png" width="190px" style="margin:auto">
-                           <span style="display: block; margin-left: 66px;">student</span> 
-                        <input type="checkbox" id="student" name="type" value="student">
-                        <span class="checkmark"></span>
+                            <label for="acads"><img src="icons/student.png" width="190px">
+                                <div class="textcenter"><input type="checkbox" id="acads" name="purpose" value="acads"> academics</div>
                       </label>
                         </div>
                     </div>
-                    <div class="main-container-check" style="margin-top: 50px;">
+                    <div class="main-container-check">
                         <div class="main-container-check-child">
-                            <label class="container" style="margin: auto;left: -7%;top: 10%;"><img src="icons/businessman (1).png" style="margin:auto">
-                            <div style="margin-left: 30px;">professional</div>
-                        <input  type="checkbox" id="pro" name="type" value="pro">
-                        <span class="checkmark"></span>
+                            <label for="field"><img src="icons/businessman (1).png" for="pro">
+                            <div class="textcenter"><input type="checkbox" id="field" name="purpose" value="field">specific field</div>
                       </label>
                         </div>
                         <div class="main-container-check-child">
-                            <label class="container" style="margin: auto;left: -7%;top: 10%;"><img src="icons/freelance.png" width="190px" style="margin:auto">
-                            <div style="margin-left: 50px;">Freelancer</div>
-                        <input type="radio" id="upto60k" name="budget" value="upto60k">
-                        <span class="checkmark"></span>
+                            <label for="general"><img src="icons/freelance.png" width="190px">
+                            <div class="textcenter"><input type="checkbox" id="general" name="purpose" value="general"> 
+                                general use</div>
                       </label>
                         </div>
                     </div>
+
             </div>
 
 
+
+
             </form>
+            <div style="width: 100%;display: flex;flex-direction:row;margin-top: 50px;">
+                <div style="width:48%;text-align: center;">
+                    <button id="back">back</button>
+                </div>
+                <div style="width:48%;text-align: center;">
+                    <a href="" id="next" onclick="switchbetween()"><button style="cursor: pointer;">next</button></a>
+                </div>
+            </div>
         </div>
 
     </div>
-
 
     <!-- <div class="modal-body">
         <div class="row-fluid">
@@ -219,7 +284,42 @@
 
     <!--  <a href='https://www.freepik.com/vectors/people'>People vector created by pch.vector - www.freepik.com</a>-->
     <!-- <a href="https://iconscout.com/icons/businessman" target="_blank">Businessman Icon</a> by <a href="https://iconscout.com/contributors/pro-symbols">Pro Symbols</a> on <a href="https://iconscout.com">Iconscout</a> -->
-<!---->
+    <script>
+        function switchbetween() {
+            // if ((document.getElementById('student').checked == true) && (document.getElementById('acads').checked == true)) {
+            //     document.getElementById('next').setAttribute('href', "./student.html");
+            // }
+            // if ((document.getElementById('gaming').checked == true) && (document.getElementById('student').checked == true)) {
+            //     document.getElementById('next').setAttribute('href', "./Gamingquest.html");
+            // }
+            if (document.getElementById('genuser').checked == true) {
+                document.getElementById('next').setAttribute('href', "./resultpage.html");
+            }
+            if ((document.getElementById('student').checked == true)) {
+                document.getElementById('next').setAttribute('href', "./student.html");
+            }
+        }
+
+
+
+
+
+        function forupto30k() {
+            if (((document.getElementById('upto30k').checked == true) || (document.getElementById('upto40k').checked == true) || (document.getElementById('upto50k').checked == true)) && (document.getElementById('gaming').checked == true)) {
+                alert('If you want to play proper games, then please click on our gaming portal.You can do basic and primitive gaming in any laptop below 50k');
+            }
+        }
+
+
+
+        // }
+        // if (window.onbeforeunload == 1) {
+        //     alert('Data will be lost if you leave the page, are you sure?');
+        // };
+        // function myFunction() {
+        //     return "Write something clever here...";
+        // }
+    </script>
 </body>
 
 </html>

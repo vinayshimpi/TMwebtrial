@@ -1,0 +1,131 @@
+input[type="radio"] {
+    height: 20px;
+    width: 20px;
+}
+
+input[type="radio"] label {
+    padding: 200px;
+}
+
+.mypadding-1 {
+    padding-top: 20px;
+    font-size: 22px;
+    /* color: orange; */
+}
+
+.myclass-1 {
+    text-align: center;
+    padding: 5px;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+
+/**************************************************************title********************/
+
+@font-face {
+    font-family: 'GeForce Bold';
+    src: url('../font/GeForce-Bold.eot');
+    src: url('../font/GeForce-Bold.eot?#iefix') format('embedded-opentype'), url('../font/GeForce-Bold.woff') format('woff'), url('../font/GeForce-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.titleTMtest {
+    height: 100px;
+    line-height: 60px;
+    font-family: geForce bold;
+    font-size: 45px;
+    margin-top: 10px;
+    color: orange;
+    text-align: center;
+    margin-top: 0;
+}
+
+@media(max-width:800px) {
+    .titleTMtest {
+        margin-bottom: 100px;
+    }
+}
+
+.titleground {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.background1 {
+    /* background-image: url(../images/Wallpapers-Laptops-007.jpg), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)); */
+    z-index: 2;
+    width: 100%;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.stepscontainer {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    margin: auto;
+}
+
+.stepbutton {
+    padding: 15px;
+    width: 150px;
+    border-radius: 50%;
+    font-family: geForce bold;
+    border: 2px solid orange;
+    color: white;
+    margin: auto;
+    font-size: 20px;
+    z-index: -100;
+}
+
+.coll1 {
+    height: 100px;
+    width: 33.333%;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+@media (max-width:800px) {
+    .stepscontainer {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    .coll1 {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.dropdown-menu input[type="checkbox"]:checked+label {
+    background-color: rgba(255, 165, 0, 0.4);
+}
+
+#acads2 {
+    display: none;
+}
+
+#acads2+label {
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    padding: 5px;
+}
+
+#acads2:checked+label {
+    background-color: orange;
+}
+
+#acads2:not(:checked)+label {
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    padding: 5px;
+}
+
+.font-25 {
+    font-size: 25px;
+}
