@@ -9,6 +9,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/customalert.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+
+            $('.click').click(function() {
+                if (((document.getElementById('upto30k').checked == true) || (document.getElementById('upto40k').checked == true) || (document.getElementById('upto50k').checked == true)) && (document.getElementById('gaming').checked == true)) {
+                    alert('function is running');
+                    $('.popup_box').css("display", "block");
+
+
+                }
+            });
+            $('.btn1').click(function() {
+                $('.popup_box').css("display", "none");
+                document.getElementById('upto30k').checked = false;
+                document.getElementById('upto40k').checked = false;
+                document.getElementById('upto50k').checked = false;
+                document.getElementById('gaming').checked = false;
+            });
+
+            $('.btn2').click(function() {
+                $('.popup_box').css("display", "none");
+                alert("Account Permanently Deleted.");
+            });
+        });
+    </script>
 
     <style>
         /* .btn-xl {
@@ -61,6 +92,10 @@
             display: none;
         }
         
+        input[type="checkbox"] {
+            display: none;
+        }
+        
         label {
             padding: 10px;
         }
@@ -104,10 +139,11 @@
 
     <div class="background">
         <div class="titleground">
-            <div class="titleTMtest" style="height:100px;line-height: 60px;font-family: geForce bold;font-size: 45px;margin-top: 10px;color: orange;text-align: center;">
+            <div class="titleTMtest" style="height:100px;padding-top:20px;line-height: 60px;font-family: 'Mukta', sans-serif;
+            ;font-size: 45px;color: orange;text-align: center;">
                 <span style="margin: auto">ThunderMan free assessment test</span>
             </div>
-            <div class="stepscontainer">
+            <!-- <div class="stepscontainer">
                 <div class="coll1">
                     <div class="stepbutton" style="background-color: rgba(255,165,0,1); border: none;">
                         step1
@@ -123,7 +159,7 @@
                         step3
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- <div style="text-align: center;position: absolute;z-index: 10; top:50%; margin-left: 100px;">
             <button>next</button>
@@ -148,6 +184,17 @@
         </div> -->
 
         <!-- </div> -->
+
+
+        <!-------------------------------------------------custom pop up code ---------------------------------------------------->
+
+        <div class="popup_box">
+            <h1>If you want to play proper games, then please click on our gaming portal.You can do basic and primitive gaming in any laptop below 50k</h1>
+            <label>Are you sure to proceed?</label>
+            <div class="btns">
+                <a class="btn1">ok</a>
+            </div>
+        </div>
         <div class="main-container">
             <div class="main-container-sub">
                 <form><br>
@@ -156,35 +203,50 @@
                     <input type="text" id="email-form" name="youremail-form" placeholder="Email ID"><br><br>
                     <!-- <label for="youremail-form">email:</label> -->
                     <input type="text" id="number-form" name="yournumber-form" placeholder="Mob No."><br>
-                    <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family: 'Montserrat',sans-serif;color: orange;font-weight: bold;">What do you best associate yourself with?<br></span>
+                    <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family:Arial, Helvetica, sans-serif ;color: orange;font-weight: bold;">What do you best associate yourself with?<br></span>
 
 
-                    <div class="main-container-check" style="margin-top: 30px;">
+                    <div class="main-container-check" style="margin-top: 30px">
                         <div class="main-container-check-child">
-                            <label for="genuser"><img src="icons/businessman (1).png" for="genuser">
-                            <div class="textcenter"> <input type="checkbox" id="genuser" name="type" value="genuser">general user</div>
+                            <div class="smallerbox">
+                                <label for="genuser"><img src="icons/businessman (1).png" for="genuser">
+                               <div> <input type="radio" id="genuser" name="type" value="genuser"><div style="padding:10px">general user</div></div>
                         </label>
+                            </div>
                         </div>
                         <div class="main-container-check-child">
-                            <label for="student"><img src="icons/student.png" width="190px">
-                                <div class="textcenter"><input type="checkbox" id="student" name="type" value="student"> student</div>
-                      </label>
+                            <div class="smallerbox">
+                                <label for="student"><img src="icons/student.png" width="190px" for="student">
+                                    <div><input type="radio" id="student" name="type" value="student"><div style="padding:10px">student</div></div>
+                                 </label>
+                            </div>
                         </div>
+                        <!-- <div class="main-container-check-child">
+                            <label for="student"><img src="icons/student.png" width="190px">
+                                <div class="textcenter"><input type="radio" id="student" name="type" value="student"> student</div>
+                      </label>
+                        </div> -->
                     </div>
                     <div class="main-container-check">
                         <div class="main-container-check-child">
-                            <label for="pro"><img src="icons/businessman (1).png" for="pro">
-                            <div class="textcenter"><input type="checkbox" id="pro" name="type" value="pro">professional</div>
-                      </label>
+                            <div class="smallerbox">
+                                <label for="pro"><img src="icons/businessman (1).png" for="pro">
+                                    <div><input type="radio" id="pro" name="type" value="pro"><div style="padding:10px">Professional</div></div>
+                        </label>
+                            </div>
                         </div>
                         <div class="main-container-check-child">
-                            <label for="freelance"><img src="icons/freelance.png" width="190px">
-                            <div class="textcenter"><input type="checkbox" id="freelance" name="type" value="freelance"> 
-                                Freelancer</div>
-                      </label>
+                            <div class="smallerbox">
+                                <label for="freelance"><img src="icons/freelance.png" width="190px" for="freelance">
+                                    <div><input type="radio" id="freelance" name="type" value="freelance"><div style="padding:10px">
+                                        Freelancer</div></div>
+                                 </label>
+                            </div>
                         </div>
+
                     </div>
-                    <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family: 'Montserrat',sans-serif;color: orange;font-weight: bold;">please mention your budget<br></span>
+
+                    <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family:Arial, Helvetica, sans-serif;color: orange;font-weight: bold;">please mention your budget<br></span>
                     <!-- <input type="radio" id="upto30k" name="budget" value="upto30k">
                     <label for="upto30k">upto 30k</label><br>
                     <input type="radio" id="upto40k" name="budget" value="upto40k">
@@ -198,12 +260,12 @@
                     <input type="radio" id="1Labove" name="budget" value="1Labove">
                     <label for="1Labove">1 Lakh above</label><br><br> -->
                     <div class="main-container-radio">
-                        <input type="radio" id="upto30k" name="budget" value="upto30k">
-                        <label for="upto30k" onclick="forupto30k()">Upto 30k
+                        <input type="radio" id="upto30k" name="budget" value="upto30k" onclick="forupto30k()" class="click">
+                        <label for="upto30k" onclick="forupto30k()" class="click">Upto 30k
                           
                         </label>
-                        <input type="radio" id="upto40k" name="budget" value="upto40k">
-                        <label for="upto40k" onclick="forupto30k()">Upto 40k
+                        <input type="radio" id="upto40k" name="budget" value="upto40k" class="click">
+                        <label for="upto40k" onclick="forupto30k()" class="click">Upto 40k
                         <!-- <span class="checkmark"></span> -->
                       </label>
                         <input type="radio" id="upto50k" name="budget" value="upto50k">
@@ -223,33 +285,74 @@
                       </label>
                     </div>
 
-                    <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family: 'Montserrat',sans-serif;color: orange;font-weight: bold;">Purpose of buying laptop<br></span>
+                    <br><br><span style="font-size: 30px;margin:0px auto 30px 0px;font-family:Arial, Helvetica, sans-serif;color: orange;font-weight: bold;">Purpose of buying laptop<br></span>
+                    <div class="main-container-check" style="margin-top: 30px">
+                        <div class="main-container-check-child">
+                            <div class="smallerbox">
+                                <label for="gaming"><img src="icons/businessman (1).png" for="genuser" onclick="forupto30k()" class="click">
+                                    <div> <input type="checkbox" id="gaming" name="purpose" value="gaming" onclick="forupto30k()" class="click"><div style="padding:10px">Gaming</div></div>
+                        </label>
+                            </div>
+                        </div>
+                        <div class="main-container-check-child">
+                            <div class="smallerbox">
+                                <label for="acads"><img src="icons/student.png" width="190px">
+                                    <div><input type="checkbox" id="acads" name="purpose" value="acads"><div style="padding:10px">Academics</div></div>
+                                 </label>
+                            </div>
+                        </div>
+                        <!-- <div class="main-container-check-child">
+                            <label for="student"><img src="icons/student.png" width="190px">
+                                <div class="textcenter"><input type="radio" id="student" name="type" value="student"> student</div>
+                      </label>
+                        </div> -->
+                    </div>
+                    <div class="main-container-check">
+                        <div class="main-container-check-child">
+                            <div class="smallerbox">
+                                <label for="field"><img src="icons/businessman (1).png" for="pro">
+                                    <div><input type="checkbox" id="field" name="purpose" value="field"><div style="padding:10px">Specific field</div></div>
+                        </label>
+                            </div>
+                        </div>
+                        <div class="main-container-check-child">
+                            <div class="smallerbox">
+                                <label for="general"><img src="icons/freelance.png" width="190px">
+                                    <div><input type="checkbox" id="general" name="purpose" value="general"><div style="padding:10px">
+                                        general use</div></div>
+                                 </label>
+                            </div>
+                        </div>
 
+                    </div>
+
+
+                    <!-- 
                     <div class="main-container-check" style="margin-top: 30px;">
                         <div class="main-container-check-child">
                             <label for="gaming"><img src="icons/businessman (1).png" for="genuser" onclick="forupto30k()">
-                            <div class="textcenter"> <input type="checkbox" id="gaming" name="purpose" value="gaming" onclick="forupto30k()">gaming</div>
+                            <div> <input type="checkbox" id="gaming" name="purpose" value="gaming" onclick="forupto30k()">gaming</div>
                         </label>
                         </div>
                         <div class="main-container-check-child">
                             <label for="acads"><img src="icons/student.png" width="190px">
-                                <div class="textcenter"><input type="checkbox" id="acads" name="purpose" value="acads"> academics</div>
+                                <div><input type="checkbox" id="acads" name="purpose" value="acads"> academics</div>
                       </label>
                         </div>
                     </div>
                     <div class="main-container-check">
                         <div class="main-container-check-child">
                             <label for="field"><img src="icons/businessman (1).png" for="pro">
-                            <div class="textcenter"><input type="checkbox" id="field" name="purpose" value="field">specific field</div>
+                            <div><input type="checkbox" id="field" name="purpose" value="field">specific field</div>
                       </label>
                         </div>
                         <div class="main-container-check-child">
                             <label for="general"><img src="icons/freelance.png" width="190px">
-                            <div class="textcenter"><input type="checkbox" id="general" name="purpose" value="general"> 
+                            <div><input type="checkbox" id="general" name="purpose" value="general"> 
                                 general use</div>
                       </label>
                         </div>
-                    </div>
+                    </div> -->
 
             </div>
 
@@ -257,12 +360,12 @@
 
 
             </form>
-            <div style="width: 100%;display: flex;flex-direction:row;margin-top: 50px;">
+            <div style="width: 100%;display: flex;flex-direction:row;margin-top: 30px;">
                 <div style="width:48%;text-align: center;">
                     <button id="back">back</button>
                 </div>
                 <div style="width:48%;text-align: center;">
-                    <a href="" id="next" onclick="switchbetween()"><button style="cursor: pointer;">next</button></a>
+                    <a href="" onclick="switchbetween()"><button id="next" style="cursor: pointer;">next</button></a>
                 </div>
             </div>
         </div>
@@ -304,11 +407,19 @@
 
 
 
-        function forupto30k() {
-            if (((document.getElementById('upto30k').checked == true) || (document.getElementById('upto40k').checked == true) || (document.getElementById('upto50k').checked == true)) && (document.getElementById('gaming').checked == true)) {
-                alert('If you want to play proper games, then please click on our gaming portal.You can do basic and primitive gaming in any laptop below 50k');
-            }
-        }
+        // function forupto30k() {
+        //     if (((document.getElementById('upto30k').checked == true) || (document.getElementById('upto40k').checked == true) || (document.getElementById('upto50k').checked == true)) && (document.getElementById('gaming').checked == true)) {
+        //         alert('If you want to play proper games, then please click on our gaming portal.You can do basic and primitive gaming in any laptop below 50k');
+        //         setTimeout(function() {
+        //             document.getElementById('upto30k').checked = false;
+        //             document.getElementById('upto40k').checked = false;
+        //             document.getElementById('upto50k').checked = false;
+        //             document.getElementById('gaming').checked = false;
+
+        //         }, 1000);
+
+        //     }
+        // }
 
 
 
@@ -320,6 +431,24 @@
         //     return "Write something clever here...";
         // }
     </script>
+    <!-- <script>
+        function forupto30k() {
+            if (((document.getElementById('upto30k').checked == true) || (document.getElementById('upto40k').checked == true) || (document.getElementById('upto50k').checked == true)) && (document.getElementById('gaming').checked == true)) {
+                alert('function is running');
+                $('.click').click(function() {
+                    $('.popup_box').css("display", "block");
+                });
+                $('.btn1').click(function() {
+                    $('.popup_box').css("display", "none");
+                });
+
+                $('.btn2').click(function() {
+                    $('.popup_box').css("display", "none");
+                    alert("Account Permanently Deleted.");
+                });
+            }
+        };
+    </script> -->
 </body>
 
 </html>
