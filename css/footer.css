@@ -1,4 +1,20 @@
-.footer-container1{
+.tempfooterspace {
+    height: 80px;
+    background-color: white;
+}
+
+#aboutustext {
+    font-size: 21px;
+    padding-left: 0px;
+}
+
+#getintouch {
+    font-size: 21px;
+    padding-left: 0px;
+    ;
+}
+
+.footer-container1 {
     width: 100%;
     padding-top: 50px;
     padding-left: 80px;
@@ -6,21 +22,25 @@
     background-color: #1E1001;
     z-index: -1;
     color: white;
-
 }
 
-#subsc{
+#subsc {
     width: 90%;
     height: 40px;
     box-shadow: none;
     border-radius: 0px;
     font-size: 5px;
     resize: none;
-    background-color: rgba(255,255,255,0.96);
-    
+    background-color: rgba(255, 255, 255, 0.96);
+    font-size: 15px;
 }
 
- #feedbackbox {
+#footerform1 {
+    max-width: 100%;
+    padding-top: 10px;
+}
+
+#feedbackbox {
     width: 90%;
     height: 110px;
     padding: 12px 20px;
@@ -29,26 +49,23 @@
     background-color: #fff;
     font-size: 16px;
     resize: none;
-    background-color: rgba(255,255,255,0.96);
+    background-color: rgba(255, 255, 255, 0.96);
     color: black;
 }
+
 ::placeholder {
-    color:rgba(0,0,0,0.8);
-    opacity: 1; 
+    color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
     font-weight: bold;
-  }
-  
-
-  
+}
 
 
+/*lskdlkjflskdlfksdlkfslkdjflskjdlkjsdlkjsldkjfjlskdjflsjdlfksjdlfkjsldkjflskdjlskjdlkslkdjjljkfjb,dnkjdhlro2jeodoqpijsd*/
 
-  /*lskdlkjflskdlfksdlkfslkdjflskjdlkjsdlkjsldkjfjlskdjflsjdlfksjdlfkjsldkjflskdjlskjdlkslkdjjljkfjb,dnkjdhlro2jeodoqpijsd*/
-
-
-  #feedbacksubmit{                         /*submit button*/
+#feedbacksubmit {
+    /*submit button*/
     max-width: 70px;
-    padding:10px;
+    padding: 10px;
     box-sizing: content-box;
     color: white;
     font-weight: bold;
@@ -59,103 +76,121 @@
     display: inline;
     transition-duration: 0.3s;
     box-shadow: none;
-  }
-  #feedbacksubmit:hover{
-      background-color: rgba(255,255,255,0.2);
-      color:orange;
-      font-weight: bolder;
-  }
+}
 
-  .foot-contain{
-      display: flex;
-      flex-direction: row;
-      padding: 10px;
+#feedbacksubmit:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: orange;
+    font-weight: bolder;
+}
+
+.foot-contain {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
     color: white;
-    background-color:#1E1001 ;
+    background-color: #1E1001;
     z-index: -2;
-  }
+}
 
-  .footcoll1{
+.footcoll1 {
     font-family: 'Montserrat', sans-serif;
-    flex:17%;
+    flex: 17%;
     margin-top: 30px;
     height: 100px;
     text-align: center;
     padding: 10px;
     height: auto;
-    color:white;
+    color: white;
+}
 
-  }
-
-  .footcoll2{
-    flex:27%;
+.footcoll2 {
+    flex: 27%;
     font-family: 'Montserrat', sans-serif;
     height: auto;
     padding: 10px;
     color: white;
     margin-top: 20px;
 }
-.footcoll4{
+
+.footcoll4 {
     font-family: 'Montserrat', sans-serif;
-    flex:10%;
+    flex: 10%;
     padding: 10px;
     height: auto;
-    color:white;
+    color: white;
     margin-top: 30px;
-
 }
 
-.footcoll3{
+.footcoll3 {
     display: flex;
     flex-direction: row;
-    flex:32%;
+    flex: 32%;
     font-family: 'Montserrat', sans-serif;
 }
 
-  /* visited link */
+
+/* visited link */
+
 a:visited {
-    color:white;
-  }
-a:link{
     color: white;
 }
 
-@media(max-width:768px){
-    .foot-contain{
-        flex-direction: column;
-    }
- 
+a:link {
+    color: white;
 }
-@media(max-width:768px){
-    .footcoll4{
-        flex:0px;
+
+@media(max-width:768px) {
+    .foot-contain {
+        flex-direction: column;
     }
 }
 
-#footcontact:hover{
-    background-color:rgba(255,255,255,0.2);
-    color:orange;
+@media(max-width:768px) {
+    .footcoll4 {
+        flex: 0px;
+    }
+}
+
+#footcontact {
+    padding: 6px;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid orange;
+    width: 40%;
+}
+
+#footcontact:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: orange;
     font-weight: bold;
     text-decoration: none;
 }
-#socialicons li{
+
+#socialicons li {
     display: inline;
 }
-#socialicons{
+
+#socialicons {
     list-style-type: none;
     margin-top: 10px;
     margin-left: 180px;
-
 }
 
-.footer-underline{
+.footer-underline {
     width: 100px;
     border-bottom: 1px solid orange;
     padding-bottom: 6px;
 }
 
-.aboutus{
+.aboutus {
     height: auto;
     width: auto;
     padding-right: 50px;
+}
+
+#footerformtext {
+    margin-left: 100px;
+    font-size: 25px;
 }

@@ -15,13 +15,17 @@
     }
 }
 
+.lh-60 {
+    line-height: 60px;
+}
+
 
 /*********************************dropdown***************/
 
 .dropbtn1 {
     color: black;
     font-size: 17px;
-    font-family: 'poppins', 'sans-serif';
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .dropdown1 {
@@ -32,6 +36,7 @@
 .dropdown1-content {
     display: none;
     position: absolute;
+    left: -16%;
     background-color: orange;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -49,22 +54,38 @@
     background-color: #ddd;
 }
 
-.dropdown1:hover .dropdown1-content {
+.drophover:hover .dropdown1-content {
     display: block;
 }
 
-.dropdown1:hover .dropbtn1 {
-    background-color: orange;
+.drophover:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
 }
 
 @media(max-width:800px) {
     .dropdown1-content {
         display: none;
     }
+    .dropdown1-content a {
+        display: none;
+    }
 }
 
 
 /************************************************accessories dropdown ends********************/
+
+#tmtestbuttonnav {
+    padding: 10px 30px 10px 30px;
+    border-radius: 25px;
+    background-color: orange;
+    color: white;
+}
+
+#tmtestbuttonnav:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.2s;
+}
 
 li.dropdown {
     z-index: 98
@@ -150,7 +171,7 @@ li a {
 
 li .nav-link {
     font-size: 17px;
-    font-family: 'poppins', 'sans-serif';
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @media(max-width:1100px) {
@@ -183,7 +204,7 @@ li .nav-link {
 }
 
 div.navbar {
-    font-size: 15px;
+    font-size: 17px;
     color: black;
 }
 
@@ -200,27 +221,76 @@ button.navbar-toggler {
     color: white;
     font-size: 40px;
     font-weight: bold;
+    padding-top: 30px;
+    font-family: 'lato', sans-serif;
+    color: black;
+}
+
+.shopby1 {
+    margin-left: 20px;
+    border: 0px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+.card-text-mynew {
+    color: black;
+    font-size: 28px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .whytm {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px;
     color: black;
     font-size: 50px;
-    font-weight: bold;
     margin-top: 80px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'mukta', sans-serif;
+}
+
+.noprior {
+    font-size: 22px;
+    font-weight: normal;
 }
 
 #spacing_why {
-    height: 300px;
+    height: 270px;
 }
 
 @media(max-width:1000px) {
     #spacing_why {
         display: none;
     }
+    .margin-t {
+        margin-top: 30px;
+    }
+    .whytmbox {
+        box-shadow: 1px 1px 5px orange;
+        height: auto;
+        width: auto;
+        padding: 10px;
+    }
+}
+
+.bestsellertext {
+    font-family: 'lato', sans-serif;
+    padding: 0px;
+}
+
+.shopby2 {
+    margin-left: 20px;
+    border: 0px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.14);
+    font-family: 'mukta', sans-serif;
+}
+
+.card-text-mynew2 {
+    color: white;
+    font: 30px bold;
+    text-align: center;
+    font-family: 'mukta', sans-serif;
 }
 
 
@@ -228,6 +298,22 @@ button.navbar-toggler {
     height:370px;
     background-color: #2C1207;
 }*/
+
+.rentaltext1 {
+    text-align: center;
+    font-family: 'mukta', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.rentaltext2 {
+    line-height: 50px;
+    margin-top: 20px;
+    font-size: 35px;
+    font-family: 'mukta', sans-serif;
+}
 
 .id1 {
     margin-top: 30px;
@@ -326,6 +412,11 @@ label {
     height: 350px;
 }
 
+.rentaltext3 {
+    font-size: 15px;
+    color: #A19F9E;
+}
+
 .coll-8 {
     width: 64%
 }
@@ -356,6 +447,7 @@ label {
 
 .coll-5img {
     flex: 50%;
+    text-align: center;
 }
 
 [class*="coll-"] {
@@ -437,7 +529,7 @@ option {
     box-sizing: content-box;
     height: auto;
     z-index: -2;
-    background-color: orange;
+    background-color: rgba(255, 165, 0, 0.8);
 }
 
 @media (max-width:768px) {
@@ -450,6 +542,13 @@ option {
 
 
 /*rented laptop*/
+
+::placeholder {
+    color: grey;
+    font-weight: normal;
+    font-family: 'lato', sans-serif;
+    font-size: 17px;
+}
 
 .flex-container1 {
     display: flex;
@@ -537,4 +636,29 @@ option {
     .adjustfooter {
         height: 800px;
     }
+}
+
+.callorcontact1 {
+    max-width: 500px;
+    height: 220px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+}
+
+.callorcontact2 {
+    font-size: 30px;
+    font-family: 'lato', sans-serif;
+}
+
+.callorcontact3 {
+    padding: 20px;
+    box-sizing: content-box;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    background-color: orange;
+    font-size: 20px;
 }
